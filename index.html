@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TuNombre</title>
+  <title>Pablo Pacheco</title>
   <style>
     :root {
       --fondo: #121212;
@@ -25,9 +25,9 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background-color: var(--primario);
+      background-color: rgba(31, 31, 31, 0.85);
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 1000;
@@ -36,13 +36,14 @@
 
     header h1 {
       margin: 0;
+      margin-right: 3rem;
       color: var(--acento);
     }
 
     nav a {
       color: var(--texto);
       text-decoration: none;
-      margin-left: 1.5rem;
+      margin-right: 1.5rem;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -78,6 +79,22 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
 
+    .contacto-iconos {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contacto-iconos a img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .contacto-iconos a:hover img {
+      transform: scale(1.1);
+    }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -88,7 +105,7 @@
 <body>
 
 <header>
-  <h1>TuNombre</h1>
+  <h1>Pablo Pacheco</h1>
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#sobremi">Sobre mí</a>
@@ -104,7 +121,7 @@
 
 <section id="sobremi">
   <h2>Sobre mí</h2>
-  <p>Soy [Tu nombre], estudiante de Ingeniería en Sistemas. Me interesa el desarrollo web, la programación y seguir aprendiendo constantemente.</p>
+  <p>Me llamo Pablo Pacheco y soy estudiante de Ingeniería en Sistemas. Me apasiona el desarrollo de software, el diseño web y la tecnología en general. Estoy en constante aprendizaje y disfruto trabajar en nuevos proyectos que me permitan crecer profesionalmente.</p>
 </section>
 
 <section id="proyectos">
@@ -123,11 +140,21 @@
 
 <section id="contacto">
   <h2>Contacto</h2>
-  <p>Puedes contactarme a través de mi correo: <strong>tunombre@ejemplo.com</strong></p>
+  <div class="contacto-iconos">
+    <a href="https://github.com/tuusuario" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/in/tuusuario" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+    </a>
+    <a href="mailto:tucorreo@ejemplo.com">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Correo">
+    </a>
+  </div>
 </section>
 
 <footer>
-  © 2025 TuNombre. Todos los derechos reservados.
+  © 2025 Pablo Pacheco. Todos los derechos reservados.
 </footer>
 
 </body>

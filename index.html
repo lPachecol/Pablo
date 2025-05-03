@@ -1,12 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TuNombre</title>
+  <style>
+    :root {
+      --fondo: #121212;
+      --primario: #1f1f1f;
+      --acento: #00bcd4;
+      --texto: #ffffff;
+      --texto-secundario: #cccccc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--primario);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    header h1 {
+      margin: 0;
+      color: var(--acento);
+    }
+
+    nav a {
+      color: var(--texto);
+      text-decoration: none;
+      margin-left: 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--acento);
+    }
+
+    section {
+      padding: 100px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    #inicio {
+      padding-top: 120px;
+    }
+
+    h2 {
+      color: var(--acento);
+    }
+
+    .proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .proyecto {
+      background-color: var(--primario);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--texto-secundario);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>TuNombre</h1>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobremi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section id="inicio">
+  <h2>Inicio</h2>
+  <p>¡Hola! Bienvenido a mi página personal. Aquí podrás conocer más sobre mí y mis proyectos.</p>
+</section>
+
+<section id="sobremi">
+  <h2>Sobre mí</h2>
+  <p>Soy [Tu nombre], estudiante de Ingeniería en Sistemas. Me interesa el desarrollo web, la programación y seguir aprendiendo constantemente.</p>
+</section>
+
+<section id="proyectos">
+  <h2>Proyectos</h2>
+  <div class="proyectos">
+    <div class="proyecto">
+      <h3>Proyecto 1</h3>
+      <p>Descripción breve del proyecto.</p>
+    </div>
+    <div class="proyecto">
+      <h3>Proyecto 2</h3>
+      <p>Descripción breve del proyecto.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Puedes contactarme a través de mi correo: <strong>tunombre@ejemplo.com</strong></p>
+</section>
+
+<footer>
+  © 2025 TuNombre. Todos los derechos reservados.
+</footer>
+
+</body>
 </html>

@@ -27,7 +27,7 @@
       width: 100%;
       background-color: rgba(31, 31, 31, 0.85);
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
       z-index: 1000;
@@ -36,14 +36,18 @@
 
     header h1 {
       margin: 0;
-      margin-right: 3rem;
       color: var(--acento);
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+      margin-right: 4vw; /* más espacio desde el borde derecho */
     }
 
     nav a {
       color: var(--texto);
       text-decoration: none;
-      margin-right: 1.5rem;
       font-weight: bold;
       transition: color 0.3s;
     }
@@ -141,10 +145,10 @@
 <section id="contacto">
   <h2>Contacto</h2>
   <div class="contacto-iconos">
-    <a href="https://github.com/tuusuario" target="_blank">
+    <a href="https://github.com/lPachecol" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
     </a>
-    <a href="https://linkedin.com/in/tuusuario" target="_blank">
+    <a href="https://www.linkedin.com/in/pablo-pacheco-075720293" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
     </a>
     <a href="mailto:tucorreo@ejemplo.com">

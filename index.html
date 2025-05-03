@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pablo Pacheco</title>
   <style>
     :root {
@@ -13,37 +13,50 @@
       --texto-secundario: #cccccc;
     }
 
+    [data-theme="light"] {
+      --fondo: #f9f9f9;
+      --primario: #ffffff;
+      --acento: #007acc;
+      --texto: #000000;
+      --texto-secundario: #333333;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--fondo);
       color: var(--texto);
       scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
     }
 
     header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: rgba(31, 31, 31, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: color-mix(in srgb, var(--primario) 85%, transparent);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, color 0.3s;
+}
 
-    header h1 {
-      margin: 0;
-      color: var(--acento);
-    }
+header h1 {
+  margin: 0;
+  color: var(--acento);
+}
 
-    nav {
-      display: flex;
-      gap: 1.5rem;
-      margin-right: 4vw; /* más espacio desde el borde derecho */
-    }
+nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-right: 0;
+  align-items: center;
+}
+
 
     nav a {
       color: var(--texto);
@@ -54,6 +67,22 @@
 
     nav a:hover {
       color: var(--acento);
+    }
+
+    .modo-btn {
+      background: none;
+      border: 2px solid var(--acento);
+      color: var(--acento);
+      border-radius: 5px;
+      padding: 0.3rem 0.7rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .modo-btn:hover {
+      background-color: var(--acento);
+      color: var(--fondo);
     }
 
     section {
@@ -115,6 +144,7 @@
     <a href="#sobremi">Sobre mí</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
+    <button class="modo-btn" onclick="cambiarModo()">Modo: <span id="modo-actual">Auto</span></button>
   </nav>
 </header>
 
@@ -156,17 +186,16 @@
   <div class="proyectos">
     <div class="proyecto">
       <h3>Inclusión Digital</h3>
-      <img src="ruta-de-la-imagen1.jpg" alt="Proyecto Inclusión Digital" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
-      <p>Durante mi tercer semestre, participé en el proyecto Inclusión Digital, impulsado por el LudoLab (Laboratorio de Sistemas de Información e Inclusión Digital) de la Escuela Politécnica Nacional. 
-        Este proyecto busca contribuir a la integración tecnológica de grupos de atención prioritaria en Ecuador.
-        Mi labor consistió en impartir clases tanto de manera presencial como virtual, dirigidas a estos grupos y a docentes del Ministerio de Educación. Esta experiencia me permitió desarrollar una comprensión inicial sobre la práctica docente, 
-        especialmente en contextos de inclusión digital y alfabetización tecnológica.</p>
+      <img src="img/Inclusión digital.jpg" alt="Proyecto Inclusión Digital" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
+      <p>Durante mi tercer semestre, participé en el proyecto Inclusión Digital, impulsado por el LudoLab (Laboratorio de Sistemas de Información e Inclusión Digital) de la Escuela Politécnica Nacional. Este proyecto busca contribuir a la integración tecnológica de grupos de atención prioritaria en Ecuador. 
+        Mi labor consistió en impartir clases tanto de manera presencial como virtual, 
+        dirigidas a estos grupos y a docentes del Ministerio de Educación. Esta experiencia me permitió desarrollar una comprensión inicial sobre la práctica docente, especialmente en contextos de inclusión digital y alfabetización tecnológica.</p>
     </div>
     <div class="proyecto">
       <h3>Radio Quántica</h3>
-      <img src="ruta-de-la-imagen2.jpg" alt="Proyecto Radio Quántica" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
-      <p>Soy miembro activo del Club Radio Quántica, una iniciativa universitaria con programas actualmente al aire. En este espacio colaboro en la producción y conducción de contenidos, lo que me ha permitido adquirir experiencia en áreas como el manejo de redes sociales, 
-        la creación de contenido digital, y la edición de audio y video. Esta participación ha complementado mi formación técnica con competencias creativas y comunicacionales clave en el entorno digital actual.</p>
+      <img src="img/rq.jpg" alt="Proyecto Radio Quántica" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
+      <p>Soy miembro activo del Club Radio Quántica, una iniciativa universitaria con programas actualmente al aire. En este espacio colaboro en la producción y conducción de contenidos, lo que me ha permitido adquirir experiencia en áreas como el manejo de redes sociales, la creación de contenido digital, y la edición de audio y video. 
+        Esta participación ha complementado mi formación técnica con competencias creativas y comunicacionales clave en el entorno digital actual.</p>
     </div>
   </div>
 </section>
@@ -190,6 +219,39 @@
 <footer>
   © 2025 Pablo Pacheco. Todos los derechos reservados.
 </footer>
+
+<script>
+  const modos = ["auto", "light", "dark"];
+  let indice = 0;
+
+  function aplicarModo(modo) {
+    const html = document.documentElement;
+    if (modo === "auto") {
+      html.removeAttribute("data-theme");
+      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      html.setAttribute("data-theme", dark ? "dark" : "light");
+    } else {
+      html.setAttribute("data-theme", modo);
+    }
+    document.getElementById("modo-actual").innerText = modo.charAt(0).toUpperCase() + modo.slice(1);
+  }
+
+  function cambiarModo() {
+    indice = (indice + 1) % modos.length;
+    const nuevoModo = modos[indice];
+    localStorage.setItem("modo", nuevoModo);
+    aplicarModo(nuevoModo);
+  }
+
+  (function () {
+    const modoGuardado = localStorage.getItem("modo") || "auto";
+    indice = modos.indexOf(modoGuardado);
+    aplicarModo(modoGuardado);
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+      if (modos[indice] === "auto") aplicarModo("auto");
+    });
+  })();
+</script>
 
 </body>
 </html>

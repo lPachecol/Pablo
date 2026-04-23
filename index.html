@@ -4,136 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pablo Pacheco</title>
-  <style>
-    :root {
-      --fondo: #121212;
-      --primario: #1f1f1f;
-      --acento: #00bcd4;
-      --texto: #ffffff;
-      --texto-secundario: #cccccc;
-    }
-
-    [data-theme="light"] {
-      --fondo: #f9f9f9;
-      --primario: #ffffff;
-      --acento: #007acc;
-      --texto: #000000;
-      --texto-secundario: #333333;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--fondo);
-      color: var(--texto);
-      scroll-behavior: smooth;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: color-mix(in srgb, var(--primario) 85%, transparent);
-  backdrop-filter: blur(5px);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0rem;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-header h1 {
-  margin: 0;
-  color: var(--acento);
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-  margin-right: 0;
-  align-items: center;
-}
-
-
-    nav a {
-      color: var(--texto);
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--acento);
-    }
-
-    .modo-btn {
-      background: none;
-      border: 2px solid var(--acento);
-      color: var(--acento);
-      border-radius: 5px;
-      padding: 0.3rem 0.7rem;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .modo-btn:hover {
-      background-color: var(--acento);
-      color: var(--fondo);
-    }
-
-    section {
-      padding: 100px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    #inicio {
-      padding-top: 120px;
-    }
-
-    h2 {
-      color: var(--acento);
-    }
-
-    .proyectos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
-    .proyecto {
-      background-color: var(--primario);
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    .contacto-iconos {
-      display: flex;
-      gap: 2rem;
-      margin-top: 1rem;
-    }
-
-    .contacto-iconos a img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s;
-    }
-
-    .contacto-iconos a:hover img {
-      transform: scale(1.1);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: var(--texto-secundario);
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
@@ -142,30 +13,37 @@ nav {
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#sobremi">Sobre mí</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiencia</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#contacto">Contacto</a>
     <button class="modo-btn" onclick="cambiarModo()">Modo: <span id="modo-actual">Auto</span></button>
   </nav>
 </header>
 
-<section id="inicio" style="height: 100vh; display: flex; align-items: center; justify-content: space-between; flex-direction: column; padding-top: 70px; box-sizing: border-box;">
-  <div style="flex: 1; width: 100%; display: flex; align-items: center; justify-content: space-around; flex-wrap: wrap; padding: 0 2rem;">
-    <div style="flex: 1; min-width: 250px;">
-      <h1 style="font-size: 3rem; margin: 0; color: var(--acento);">Pablo Pacheco</h1>
-      <p style="font-size: 1.2rem; color: var(--texto-secundario);">Estudiante de Ingeniería en Computación</p>
+<section id="inicio" class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-kicker">Portafolio personal</p>
+      <h2>Pablo Pacheco</h2>
+      <p class="hero-subtitle">Estudiante de Ingeniería en Computación enfocado en redes, infraestructura y creación digital.</p>
+      <div class="hero-cta">
+        <a href="#proyectos" class="btn btn-fill">Ver proyectos</a>
+        <a href="docs/PABLO_ANDRÉS_PACHECO_OLIVO_CV.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+      </div>
     </div>
-    <div style="flex: 1; min-width: 250px; text-align: center;">
-      <img src="ruta-de-tu-foto.jpg" alt="Pablo Pacheco" style="width: 100%; max-width: 300px; border-radius: 10px;">
+    <div class="hero-image-wrap">
+      <img src="img/Pablo.png" alt="Pablo Pacheco" class="hero-image">
     </div>
   </div>
-  <div style="margin-bottom: 20px;">
-    <a href="#sobremi" style="text-decoration: none;">
-      <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="Flecha hacia abajo" style="width: 40px; transform: rotate(180deg); opacity: 0.6; transition: opacity 0.3s;">
+  <div class="hero-arrow-wrap">
+    <a href="#sobremi">
+      <img src="https://cdn-icons-png.flaticon.com/512/892/892692.png" alt="Flecha hacia abajo" class="hero-arrow">
     </a>
   </div>
 </section>
 
-<section id="sobremi">
+<section id="sobremi" class="reveal">
   <h2>Sobre mí</h2>
   <p>
     Mi nombre es Pablo Pacheco. Soy estudiante de Ingeniería en Computación en la Escuela Politécnica Nacional, una de las instituciones más prestigiosas de Ecuador. Nací en Quito, ciudad en la que crecí y donde descubrí mi pasión por la tecnología y la computación.
@@ -181,28 +59,62 @@ nav {
   </p>
 </section>
 
-<section id="proyectos">
+<section id="habilidades" class="reveal">
+  <h2>Habilidades</h2>
+  <div class="chips">
+    <span class="chip">Redes de computadores</span>
+    <span class="chip">Ciberseguridad básica</span>
+    <span class="chip">Linux</span>
+    <span class="chip">Python</span>
+    <span class="chip">HTML, CSS y JavaScript</span>
+    <span class="chip">Edición de audio y video</span>
+    <span class="chip">Producción de contenido digital</span>
+  </div>
+</section>
+
+<section id="experiencia" class="reveal">
+  <h2>Experiencia y formación</h2>
+  <div class="timeline">
+    <article class="timeline-item">
+      <p class="timeline-date">2025 - Actualidad</p>
+      <h3>Club Radio Quántica</h3>
+      <p>Producción y conducción de programas; gestión de redes sociales y piezas multimedia para difusión universitaria.</p>
+    </article>
+    <article class="timeline-item">
+      <p class="timeline-date">2024</p>
+      <h3>Proyecto Inclusión Digital - LudoLab</h3>
+      <p>Impartición de clases presenciales y virtuales para grupos de atención prioritaria y docentes del Ministerio de Educación.</p>
+    </article>
+    <article class="timeline-item">
+      <p class="timeline-date">En curso</p>
+      <h3>Ingeniería en Computación - EPN</h3>
+      <p>Formación con enfoque en redes, sistemas y soluciones tecnológicas aplicadas a impacto social.</p>
+    </article>
+  </div>
+</section>
+
+<section id="proyectos" class="reveal">
   <h2>Proyectos</h2>
   <div class="proyectos">
     <div class="proyecto">
       <h3>Inclusión Digital</h3>
-      <img src="img/Inclusión digital.jpg" alt="Proyecto Inclusión Digital" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
+      <img src="img/Inclusión digital.jpg" alt="Proyecto Inclusión Digital" class="project-image">
       <p>Durante mi tercer semestre, participé en el proyecto Inclusión Digital, impulsado por el LudoLab (Laboratorio de Sistemas de Información e Inclusión Digital) de la Escuela Politécnica Nacional. Este proyecto busca contribuir a la integración tecnológica de grupos de atención prioritaria en Ecuador. 
         Mi labor consistió en impartir clases tanto de manera presencial como virtual, 
         dirigidas a estos grupos y a docentes del Ministerio de Educación. Esta experiencia me permitió desarrollar una comprensión inicial sobre la práctica docente, especialmente en contextos de inclusión digital y alfabetización tecnológica.</p>
     </div>
     <div class="proyecto">
       <h3>Radio Quántica</h3>
-      <img src="img/rq.jpg" alt="Proyecto Radio Quántica" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 1rem;">
+      <img src="img/rq.jpg" alt="Proyecto Radio Quántica" class="project-image">
       <p>Soy miembro activo del Club Radio Quántica, una iniciativa universitaria con programas actualmente al aire. En este espacio colaboro en la producción y conducción de contenidos, lo que me ha permitido adquirir experiencia en áreas como el manejo de redes sociales, la creación de contenido digital, y la edición de audio y video. 
         Esta participación ha complementado mi formación técnica con competencias creativas y comunicacionales clave en el entorno digital actual.</p>
     </div>
   </div>
 </section>
 
-<section id="contacto">
+<section id="contacto" class="reveal">
   <h2>Contacto</h2>
-  <p style="color: var(--texto-secundario);">Contáctame para proyectos de colaboración, investigación y consultoría.</p>
+  <p class="contact-text">Contáctame para proyectos de colaboración, investigación y consultoría.</p>
   <div class="contacto-iconos">
     <a href="https://github.com/lPachecol" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
@@ -220,38 +132,7 @@ nav {
   © 2025 Pablo Pacheco. Todos los derechos reservados.
 </footer>
 
-<script>
-  const modos = ["auto", "light", "dark"];
-  let indice = 0;
-
-  function aplicarModo(modo) {
-    const html = document.documentElement;
-    if (modo === "auto") {
-      html.removeAttribute("data-theme");
-      const dark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      html.setAttribute("data-theme", dark ? "dark" : "light");
-    } else {
-      html.setAttribute("data-theme", modo);
-    }
-    document.getElementById("modo-actual").innerText = modo.charAt(0).toUpperCase() + modo.slice(1);
-  }
-
-  function cambiarModo() {
-    indice = (indice + 1) % modos.length;
-    const nuevoModo = modos[indice];
-    localStorage.setItem("modo", nuevoModo);
-    aplicarModo(nuevoModo);
-  }
-
-  (function () {
-    const modoGuardado = localStorage.getItem("modo") || "auto";
-    indice = modos.indexOf(modoGuardado);
-    aplicarModo(modoGuardado);
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
-      if (modos[indice] === "auto") aplicarModo("auto");
-    });
-  })();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -358,6 +358,34 @@ footer {
   transform: translateY(0);
 }
 
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--borde);
+  box-shadow: var(--sombra);
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholder-img {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
 @keyframes heroReveal {
   from {
     opacity: 0;

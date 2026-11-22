@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pablo Pacheco</title>
+  <title>Pablo Pacheco | Portafolio</title>
+  <meta name="description" content="Portafolio de Pablo Pacheco, estudiante de Ciencias de la Computación en la EPN. Proyectos de visión por computador y redes Cisco.">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,7 +15,7 @@
     <a href="#inicio">Inicio</a>
     <a href="#sobremi">Sobre mí</a>
     <a href="#habilidades">Habilidades</a>
-    <a href="#proyectos">Ingeniería</a>
+    <a href="#proyectos">Proyectos</a>
     <a href="#docencia">Liderazgo</a>
     <a href="#creativo">Audiovisual</a>
     <a href="#contacto">Contacto</a>
@@ -25,12 +26,12 @@
 <section id="inicio" class="hero">
   <div class="hero-content">
     <div class="hero-text">
-      <p class="hero-kicker">Estudiante de Ingeniería en Computación de la EPN</p>
+      <p class="hero-kicker">Ciencias de la Computación · Escuela Politécnica Nacional</p>
       <h2>Pablo Pacheco</h2>
-      <p class="hero-subtitle">Entusiasta de las redes de computadores, la infraestructura y el código. Combino mi formación técnica con un enfoque proactivo para el aprendizaje y la resolución de problemas.</p>
+      <p class="hero-subtitle">Proyectos en equipo de redes Cisco y visión por computador. Tutor de redes e instructor de inclusión digital.</p>
       <div class="hero-cta">
         <a href="#proyectos" class="btn btn-fill">Ver proyectos</a>
-        <a href="docs/PABLO_ANDRÉS_PACHECO_OLIVO_CV.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Descargar CV</a>
+        <a href="docs/cv-pablo-pacheco.pdf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Descargar CV</a>
       </div>
     </div>
     <div class="hero-image-wrap">
@@ -47,7 +48,7 @@
 <section id="sobremi" class="reveal">
   <h2>Sobre mí</h2>
   <p>
-    Actualmente curso el sexto semestre de Ingeniería en Computación en la Escuela Politécnica Nacional. A lo largo de la carrera he descubierto un gran interés por la infraestructura de redes, la ciberseguridad y el desarrollo de software.
+    Actualmente curso el séptimo semestre de Ciencias de la Computación en la Escuela Politécnica Nacional. A lo largo de la carrera he descubierto un gran interés por la infraestructura de redes, la ciberseguridad y el desarrollo de software.
   </p>
   <p>
     Además de mi enfoque en la parte técnica, me gusta compartir lo que aprendo. He participado como instructor en capacitaciones tecnológicas para grupos vulnerables y suelo dar tutorías a mis compañeros. También he ganado experiencia en atención al cliente, logística y edición audiovisual freelance.
@@ -71,23 +72,35 @@
 </section>
 
 <section id="proyectos" class="reveal">
-  <h2>Proyectos de Ingeniería</h2>
-  <div class="proyectos">
-    <div class="proyecto">
-      <h3>Segmentación Semántica con IA</h3>
-      <div class="placeholder-img" style="height: 190px; background-color: color-mix(in srgb, var(--panel) 40%, transparent); border: 1px dashed var(--borde); border-radius: 10px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; color: var(--texto-secundario);">GIF / Imagen IA</div>
-      <p>Participación activa en un proyecto de segmentación semántica. Colaboré en el desarrollo general y la integración de modelos de IA para realizar el tracking de personas y la segmentación de prendas de vestir en tiempo real.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Infraestructura de Redes</h3>
-      <div class="placeholder-img" style="height: 190px; background-color: color-mix(in srgb, var(--panel) 40%, transparent); border: 1px dashed var(--borde); border-radius: 10px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; color: var(--texto-secundario);">Diagrama Packet Tracer</div>
-      <p>Manejo de Cisco Packet Tracer para el diseño y simulación de topologías. Práctica en la configuración de VLANs, VLSM, enrutamiento estático y dinámico, ACLs, EtherChannel, STP y soluciones de IoT.</p>
-    </div>
-    <div class="proyecto">
-      <h3>Robótica de Combate</h3>
-      <div class="placeholder-img" style="height: 190px; background-color: color-mix(in srgb, var(--panel) 40%, transparent); border: 1px dashed var(--borde); border-radius: 10px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; color: var(--texto-secundario);">Foto Robot PUMABOT</div>
-      <p>Colaboración en el diseño y programación de un robot de combate junto a un equipo de compañeros de la universidad, preparándonos para competir en el torneo IEEE PUMABOT 2025.</p>
-    </div>
+  <h2>Proyectos destacados</h2>
+  <p>Trabajos académicos desarrollados en equipo en la Escuela Politécnica Nacional.</p>
+  <div class="proyectos proyectos-destacados">
+    <article class="proyecto">
+      <ol class="flujo-vision" aria-label="Flujo de procesamiento">
+        <li>Webcam</li>
+        <li>YOLOv8</li>
+        <li>U-Net++</li>
+        <li>Recorte PNG</li>
+      </ol>
+      <h3>Segmentación semántica de ropa</h3>
+      <p>Detecta personas en video, segmenta las prendas por píxel y permite exportarlas como PNG con transparencia. Incluye un historial de extracciones.</p>
+      <p class="proyecto-tecnologias">Python · FastAPI · MongoDB</p>
+      <a class="proyecto-enlace" href="https://github.com/lPachecol/segmentacion-de-ropa">Ver código y experimentos <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="proyecto">
+      <img src="img/proyectos/redes-ii.png" alt="Topología de tres capas de la sede Quito en Packet Tracer" class="proyecto-captura" loading="lazy">
+      <h3>Red de voz y datos para tres sedes</h3>
+      <p>Redes II. Compara una arquitectura de tres capas en Quito con una malla Spine-Leaf en Guayaquil e integra telefonía IP y una ruta WAN alterna por Santo Domingo.</p>
+      <p class="proyecto-tecnologias">Packet Tracer · OSPF · HSRP · VoIP</p>
+      <a class="proyecto-enlace" href="https://github.com/lPachecol/interconexion-redes-ii-packet-tracer">Ver simulación e informe <span aria-hidden="true">↗</span></a>
+    </article>
+    <article class="proyecto">
+      <img src="img/proyectos/redes-i.png" alt="Topología lógica de seis sedes interconectadas en Packet Tracer" class="proyecto-captura" loading="lazy">
+      <h3>Interconexión de redes para seis sedes</h3>
+      <p>Redes I. Simula una WAN serial para seis sedes, con VLAN por áreas, direccionamiento VLSM y puertas de enlace redundantes.</p>
+      <p class="proyecto-tecnologias">Packet Tracer · VLSM · RIPv2 · HSRP</p>
+      <a class="proyecto-enlace" href="https://github.com/lPachecol/interconexion-redes-packet-tracer">Ver simulación y VLSM <span aria-hidden="true">↗</span></a>
+    </article>
   </div>
 </section>
 
@@ -101,7 +114,6 @@
     </div>
     <div class="proyecto">
       <h3>Tutorías Académicas</h3>
-      <div class="placeholder-img" style="height: 190px; background-color: color-mix(in srgb, var(--panel) 40%, transparent); border: 1px dashed var(--borde); border-radius: 10px; margin-bottom: 0.8rem; display: flex; align-items: center; justify-content: center; color: var(--texto-secundario);">Foto Pizarra / Clase</div>
       <p>Brindo tutorías a mis compañeros en materias de ciencias básicas (Cálculo, EDO) y en asignaturas de especialidad como Fundamentos de Redes y Redes de Computadores (I y II), buscando explicar temas complejos de forma digerible.</p>
     </div>
   </div>

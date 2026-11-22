@@ -447,3 +447,67 @@ footer {
     gap: 0.9rem;
   }
 }
+
+.proyectos-destacados .proyecto {
+  display: flex;
+  flex-direction: column;
+}
+
+.proyecto-captura,
+.flujo-vision {
+  box-sizing: border-box;
+  width: 100%;
+  height: 160px;
+  margin: 0 0 1rem;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  background: var(--panel);
+}
+
+.proyecto-captura {
+  display: block;
+  object-fit: contain;
+  background: #eff4f8;
+}
+
+.flujo-vision {
+  display: grid;
+  align-content: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .5rem;
+  padding: 1rem;
+  list-style: none;
+}
+
+.flujo-vision li {
+  border: 1px solid var(--borde);
+  border-radius: .5rem;
+  padding: .45rem .25rem;
+  text-align: center;
+  font-size: .9rem;
+}
+
+.proyecto-tecnologias {
+  color: var(--texto-secundario);
+  font-size: .88rem;
+}
+
+.proyecto-enlace {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: .6rem;
+  color: inherit;
+  font-weight: 700;
+  text-underline-offset: .22em;
+}
+
+.proyecto-enlace:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+@media (max-width: 380px) {
+  .proyectos-destacados {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
